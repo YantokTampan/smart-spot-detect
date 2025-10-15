@@ -13,7 +13,6 @@ export interface ParkingLot {
   totalSpots: number;
   availableSpots: number;
   distance: string;
-  pricePerHour: number;
   coordinates: {
     lat: number;
     lng: number;

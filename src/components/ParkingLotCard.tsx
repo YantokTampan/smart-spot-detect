@@ -1,5 +1,5 @@
 import { ParkingLot } from '@/types/parking';
-import { MapPin, Navigation, Clock } from 'lucide-react';
+import { MapPin, Navigation } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -33,10 +33,6 @@ export const ParkingLotCard = ({ lot, onSelect }: ParkingLotCardProps) => {
         <span className="flex items-center gap-1">
           <Navigation className="w-4 h-4" />
           {lot.distance}
-        </span>
-        <span className="flex items-center gap-1">
-          <Clock className="w-4 h-4" />
-          ${lot.pricePerHour}/hr
         </span>
       </div>
       

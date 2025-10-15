@@ -8,7 +8,6 @@ export const mockParkingLots: ParkingLot[] = [
     totalSpots: 150,
     availableSpots: 23,
     distance: '0.3 km',
-    pricePerHour: 5,
     coordinates: { lat: 40.7128, lng: -74.0060 },
     spots: Array.from({ length: 150 }, (_, i) => ({
       id: `spot-1-${i}`,
@@ -25,7 +24,6 @@ export const mockParkingLots: ParkingLot[] = [
     totalSpots: 200,
     availableSpots: 45,
     distance: '0.7 km',
-    pricePerHour: 4,
     coordinates: { lat: 40.7138, lng: -74.0070 },
     spots: Array.from({ length: 200 }, (_, i) => ({
       id: `spot-2-${i}`,
@@ -42,7 +40,6 @@ export const mockParkingLots: ParkingLot[] = [
     totalSpots: 100,
     availableSpots: 67,
     distance: '1.2 km',
-    pricePerHour: 6,
     coordinates: { lat: 40.7148, lng: -74.0050 },
     spots: Array.from({ length: 100 }, (_, i) => ({
       id: `spot-3-${i}`,
