@@ -70,10 +70,6 @@ export const ParkingDetails = ({ lot }: ParkingDetailsProps) => {
               <div className="w-4 h-4 rounded bg-destructive/20 border-2 border-destructive" />
               <span>Occupied</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded bg-warning/20 border-2 border-warning" />
-              <span>Reserved</span>
-            </div>
           </div>
         </Card>
       </div>

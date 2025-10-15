@@ -15,8 +15,6 @@ export const ParkingSpotGrid = ({ spots, floor }: ParkingSpotGridProps) => {
         return 'bg-success/20 border-success hover:bg-success/30';
       case 'occupied':
         return 'bg-destructive/20 border-destructive';
-      case 'reserved':
-        return 'bg-warning/20 border-warning';
     }
   };
   

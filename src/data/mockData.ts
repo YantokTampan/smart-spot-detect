@@ -12,7 +12,7 @@ export const mockParkingLots: ParkingLot[] = [
     spots: Array.from({ length: 150 }, (_, i) => ({
       id: `spot-1-${i}`,
       number: `A${i + 1}`,
-      status: Math.random() > 0.7 ? 'available' : Math.random() > 0.5 ? 'occupied' : 'reserved',
+      status: Math.random() > 0.7 ? 'available' : 'occupied',
       type: i % 10 === 0 ? 'disabled' : i % 15 === 0 ? 'electric' : 'standard',
       floor: Math.floor(i / 50) + 1,
     })),
@@ -28,7 +28,7 @@ export const mockParkingLots: ParkingLot[] = [
     spots: Array.from({ length: 200 }, (_, i) => ({
       id: `spot-2-${i}`,
       number: `B${i + 1}`,
-      status: Math.random() > 0.6 ? 'available' : Math.random() > 0.5 ? 'occupied' : 'reserved',
+      status: Math.random() > 0.6 ? 'available' : 'occupied',
       type: i % 8 === 0 ? 'disabled' : i % 12 === 0 ? 'electric' : i % 20 === 0 ? 'compact' : 'standard',
       floor: Math.floor(i / 50) + 1,
     })),
@@ -44,7 +44,7 @@ export const mockParkingLots: ParkingLot[] = [
     spots: Array.from({ length: 100 }, (_, i) => ({
       id: `spot-3-${i}`,
       number: `C${i + 1}`,
-      status: Math.random() > 0.4 ? 'available' : Math.random() > 0.5 ? 'occupied' : 'reserved',
+      status: Math.random() > 0.4 ? 'available' : 'occupied',
       type: i % 12 === 0 ? 'disabled' : i % 10 === 0 ? 'electric' : 'standard',
       floor: Math.floor(i / 50) + 1,
     })),
