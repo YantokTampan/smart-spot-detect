@@ -11,7 +11,7 @@ const Index = () => {
   const parkingLot = useParkingData();
   
   if (selectedLot) {
-    return <ParkingDetails lot={selectedLot} />;
+    return <ParkingDetails lot={parkingLot} />;
   }
   
   return (
