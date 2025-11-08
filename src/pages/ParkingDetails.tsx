@@ -9,10 +9,10 @@ import { ParkingSpotGrid } from '@/components/ParkingSpotGrid';
 
 interface ParkingDetailsProps {
   lot: ParkingLot;
+  onBack: () => void;
 }
 
-export const ParkingDetails = ({ lot }: ParkingDetailsProps) => {
-  const navigate = useNavigate();
+export const ParkingDetails = ({ lot, onBack }: ParkingDetailsProps) => {
   const [selectedFloor, setSelectedFloor] = useState(1);
   const maxFloor = Math.max(...lot.spots.map(s => s.floor));
   
@@ -20,7 +20,7 @@ export const ParkingDetails = ({ lot }: ParkingDetailsProps) => {
     <div className="min-h-screen bg-background">
       <div className="sticky top-0 z-10 bg-background border-b px-4 py-4">
         <div className="max-w-7xl mx-auto flex items-center gap-4">
-          <Button variant="ghost" size="icon" onClick={() => navigate('/')}>
+          <Button variant="ghost" size="icon" onClick={onBack}>
             <ArrowLeft className="w-5 h-5" />
           </Button>
           <div>
