@@ -1,5 +1,5 @@
 import { ParkingSpot } from '@/types/parking';
-import { Car, Zap, Accessibility } from 'lucide-react';
+import { Car } from 'lucide-react';
 
 interface ParkingSpotGridProps {
   spots: ParkingSpot[];
@@ -18,17 +18,6 @@ export const ParkingSpotGrid = ({ spots, floor }: ParkingSpotGridProps) => {
     }
   };
   
-  const getSpotIcon = (type: ParkingSpot['type']) => {
-    switch (type) {
-      case 'electric':
-        return <Zap className="w-3 h-3" />;
-      case 'disabled':
-        return <Accessibility className="w-3 h-3" />;
-      default:
-        return <Car className="w-3 h-3" />;
-    }
-  };
-  
   return (
     <div className="grid grid-cols-10 gap-2">
       {floorSpots.map((spot) => (
@@ -36,7 +25,7 @@ export const ParkingSpotGrid = ({ spots, floor }: ParkingSpotGridProps) => {
           key={spot.id}
           className={`aspect-square rounded border-2 flex flex-col items-center justify-center text-xs transition-all ${getSpotColor(spot.status)} ${spot.status === 'available' ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
         >
-          {getSpotIcon(spot.type)}
+          <Car className="w-3 h-3" />
           <span className="font-medium mt-1">{spot.number}</span>
         </div>
       ))}

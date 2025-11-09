@@ -2,7 +2,7 @@ export interface ParkingSpot {
   id: string;
   number: string;
   status: 'available' | 'occupied';
-  type: 'standard' | 'disabled' | 'electric' | 'compact';
+  type: 'standard';
   floor: number;
 }
 

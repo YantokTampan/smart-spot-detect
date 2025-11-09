@@ -12,7 +12,7 @@ const createSpotsForLot = (lotId: string, prefix: string, count: number): Parkin
       id: `${lotId}-${prefix}${i}`,
       number: `${prefix}${i}`,
       status: Math.random() > 0.5 ? 'available' : 'occupied',
-      type: i % 8 === 0 ? 'disabled' : i % 6 === 0 ? 'electric' : 'standard',
+      type: 'standard',
       floor: floor,
     });
   }
@@ -29,7 +29,7 @@ const createFilkomSpots = (): ParkingSpot[] => {
       id: `filkom-A${i}`,
       number: `A${i}`,
       status: 'available',
-      type: i % 5 === 0 ? 'disabled' : i % 3 === 0 ? 'electric' : 'standard',
+      type: 'standard',
       floor: 1,
     });
   }
@@ -40,7 +40,7 @@ const createFilkomSpots = (): ParkingSpot[] => {
       id: `filkom-B${i}`,
       number: `B${i}`,
       status: 'available',
-      type: i % 5 === 0 ? 'disabled' : i % 3 === 0 ? 'electric' : 'standard',
+      type: 'standard',
       floor: 2,
     });
   }
