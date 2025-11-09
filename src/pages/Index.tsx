@@ -7,10 +7,11 @@ import { ParkingLot } from '@/types/parking';
 
 const Index = () => {
   const [selectedLot, setSelectedLot] = useState<ParkingLot | null>(null);
-  const parkingLot = useParkingData();
+  const parkingLots = useParkingData();
   
   if (selectedLot) {
-    return <ParkingDetails lot={parkingLot} onBack={() => setSelectedLot(null)} />;
+    const currentLot = parkingLots.find(lot => lot.id === selectedLot.id) || selectedLot;
+    return <ParkingDetails lot={currentLot} onBack={() => setSelectedLot(null)} />;
   }
   
   return (
@@ -36,7 +37,9 @@ const Index = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ParkingLotCard key={parkingLot.id} lot={parkingLot} onSelect={setSelectedLot} />
+          {parkingLots.map(lot => (
+            <ParkingLotCard key={lot.id} lot={lot} onSelect={setSelectedLot} />
+          ))}
         </div>
       </div>
     </div>
