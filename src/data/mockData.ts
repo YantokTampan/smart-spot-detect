@@ -7,7 +7,6 @@ export const mockParkingLots: ParkingLot[] = [
     address: '123 Main Street, Downtown',
     totalSpots: 150,
     availableSpots: 23,
-    distance: '0.3 km',
     coordinates: { lat: 40.7128, lng: -74.0060 },
     spots: Array.from({ length: 150 }, (_, i) => ({
       id: `spot-1-${i}`,
@@ -23,7 +22,6 @@ export const mockParkingLots: ParkingLot[] = [
     address: '456 Commerce Ave',
     totalSpots: 200,
     availableSpots: 45,
-    distance: '0.7 km',
     coordinates: { lat: 40.7138, lng: -74.0070 },
     spots: Array.from({ length: 200 }, (_, i) => ({
       id: `spot-2-${i}`,
@@ -39,7 +37,6 @@ export const mockParkingLots: ParkingLot[] = [
     address: '789 Station Road',
     totalSpots: 100,
     availableSpots: 67,
-    distance: '1.2 km',
     coordinates: { lat: 40.7148, lng: -74.0050 },
     spots: Array.from({ length: 100 }, (_, i) => ({
       id: `spot-3-${i}`,

@@ -1,5 +1,5 @@
 import { ParkingLot } from '@/types/parking';
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -27,13 +27,6 @@ export const ParkingLotCard = ({ lot, onSelect }: ParkingLotCardProps) => {
           </div>
           <div className="text-xs text-muted-foreground">of {lot.totalSpots} free</div>
         </div>
-      </div>
-      
-      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-        <span className="flex items-center gap-1">
-          <Navigation className="w-4 h-4" />
-          {lot.distance}
-        </span>
       </div>
       
       <div className="w-full bg-secondary rounded-full h-2 mb-4">
